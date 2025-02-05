@@ -14,4 +14,4 @@
 
 [Postman Collection](./docs/testworkapi.postman_collection.json) - Документация по роутам
 
-[Architecture](./docs/architecture.md) 
+[Architecture](./docs/architecture.md) - Документация по архитектуре
