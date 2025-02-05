@@ -1,0 +1,3515 @@
+{
+	"info": {
+		"_postman_id": "3a9df5c9-875e-446d-9003-5d42febee9bf",
+		"name": "TestWork API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37549891"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseApi}}/users/1",
+							"host": [
+								"{{baseApi}}"
+							],
+							"path": [
+								"users",
+								"1"
+							]
+						},
+						"description": "Получить пользователя по id."
+					},
+					"response": [
+						{
+							"name": "Get User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "0.0.0.0/api/users/100",
+									"host": [
+										"0",
+										"0",
+										"0",
+										"0"
+									],
+									"path": [
+										"api",
+										"users",
+										"100"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 01:58:57 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Ok\",\n    \"data\": {\n        \"id\": 1,\n        \"firstname\": \"Adaline\",\n        \"lastname\": \"Witting\",\n        \"phone\": \"+75238180766\",\n        \"avatarId\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get User Avatar",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseApi}}/users/:id/avatar",
+							"host": [
+								"{{baseApi}}"
+							],
+							"path": [
+								"users",
+								":id",
+								"avatar"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						},
+						"description": "Получить аватар пользователя. Если аватар или пользователь не найден, 404."
+					},
+					"response": [
+						{
+							"name": "Get User Avatar 404 User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "0.0.0.0/api/users/14/avatar",
+									"host": [
+										"0",
+										"0",
+										"0",
+										"0"
+									],
+									"path": [
+										"api",
+										"users",
+										"14",
+										"avatar"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 02:59:24 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 404,\n    \"message\": \"Error\",\n    \"errors\": {\n        \"1\": \"User with id 14 not found\"\n    }\n}"
+						},
+						{
+							"name": "Get User Avatar 404 Avatar",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseApi}}/users/4/avatar",
+									"host": [
+										"{{baseApi}}"
+									],
+									"path": [
+										"users",
+										"4",
+										"avatar"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 03:00:21 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 404,\n    \"message\": \"Error\",\n    \"errors\": {\n        \"1\": \"User avatar not found\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete User Avatar",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseApi}}/users/1/avatar",
+							"host": [
+								"{{baseApi}}"
+							],
+							"path": [
+								"users",
+								"1",
+								"avatar"
+							]
+						},
+						"description": "Удалить аватар пользователя."
+					},
+					"response": [
+						{
+							"name": "Delete User Avatar",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "0.0.0.0/api/users/1/avatar",
+									"host": [
+										"0",
+										"0",
+										"0",
+										"0"
+									],
+									"path": [
+										"api",
+										"users",
+										"1",
+										"avatar"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 02:12:41 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"User avatar deleted successfully!\",\n    \"data\": {\n        \"id\": 1\n    }\n}"
+						},
+						{
+							"name": "Delete User Avatar 404",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseApi}}/users/40/avatar",
+									"host": [
+										"{{baseApi}}"
+									],
+									"path": [
+										"users",
+										"40",
+										"avatar"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 03:02:00 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 404,\n    \"message\": \"Error\",\n    \"errors\": {\n        \"1\": \"User with id 40 not found\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"name\": \"John Doe\", \"email\": \"john.doe@example.com\", \"password\": \"12345678\" }"
+						},
+						"url": {
+							"raw": "{{baseApi}}/users",
+							"host": [
+								"{{baseApi}}"
+							],
+							"path": [
+								"users"
+							]
+						},
+						"description": "Создать пользователя. Аватар является обязательным."
+					},
+					"response": [
+						{
+							"name": "Create User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "firstname",
+											"value": "Кирилл",
+											"description": "required|string|min:4|max:39",
+											"type": "text"
+										},
+										{
+											"key": "lastname",
+											"value": "Иванов",
+											"description": "required|string|min:4|max:39",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "+79215312314",
+											"description": "required|string|regex:/^\\+7\\d{10}$/",
+											"type": "text"
+										},
+										{
+											"key": "avatar",
+											"description": "required|image|mimes:png,jpg|max:2048",
+											"type": "file",
+											"src": "/home/vaerus/67a276e158d39.png"
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "text"
+										}
+									}
+								},
+								"url": {
+									"raw": "0.0.0.0/api/users",
+									"host": [
+										"0",
+										"0",
+										"0",
+										"0"
+									],
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 02:35:33 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"User created successfully!\",\n    \"data\": {\n        \"id\": 14\n    }\n}"
+						},
+						{
+							"name": "Create User ValidationFailed",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "firstname",
+											"value": "К",
+											"description": "required|string|min:4|max:39",
+											"type": "text"
+										},
+										{
+											"key": "lastname",
+											"value": "Ивановdddddddddddddddddddddddddddddddddddddddddddd",
+											"description": "required|string|min:4|max:39",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "+792134",
+											"description": "required|string|regex:/^\\+7\\d{10}$/",
+											"type": "text"
+										},
+										{
+											"key": "avatar",
+											"description": "required|image|mimes:png,jpg|max:2048",
+											"type": "file",
+											"src": []
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "text"
+										}
+									}
+								},
+								"url": {
+									"raw": "0.0.0.0/api/users",
+									"host": [
+										"0",
+										"0",
+										"0",
+										"0"
+									],
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 03:12:27 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"The firstname field must be at least 4 characters. (and 3 more errors)\",\n    \"errors\": {\n        \"firstname\": [\n            \"The firstname field must be at least 4 characters.\"\n        ],\n        \"lastname\": [\n            \"The lastname field must not be greater than 39 characters.\"\n        ],\n        \"phone\": [\n            \"The phone field format is invalid.\"\n        ],\n        \"avatar\": [\n            \"The avatar field is required.\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"name\": \"Updated Name\", \"email\": \"updated@example.com\" }"
+						},
+						"url": {
+							"raw": "{{baseApi}}/users/:id",
+							"host": [
+								"{{baseApi}}"
+							],
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						},
+						"description": "Обновить данные пользователя. Аватар не является обязательным."
+					},
+					"response": [
+						{
+							"name": "Update User with Avatar",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "firstname",
+											"value": "Adaline",
+											"description": "required|string|min:4|max:39",
+											"type": "text"
+										},
+										{
+											"key": "lastname",
+											"value": "Witting",
+											"description": "required|string|min:4|max:39",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "+75238180766",
+											"description": "required|string|regex:/^\\+7\\d{10}$/",
+											"type": "text"
+										},
+										{
+											"key": "avatar",
+											"description": "nullable|image|mimes:png,jpg|max:2048",
+											"type": "file",
+											"src": "/home/vaerus/67a276e158d39.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "0.0.0.0/api/users/1",
+									"host": [
+										"0",
+										"0",
+										"0",
+										"0"
+									],
+									"path": [
+										"api",
+										"users",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 02:33:41 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"User updated successfully!\",\n    \"data\": {\n        \"id\": 1\n    }\n}"
+						},
+						{
+							"name": "Update User without Avatar",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "firstname",
+											"value": "Adaline",
+											"description": "required|string|min:4|max:39",
+											"type": "text"
+										},
+										{
+											"key": "lastname",
+											"value": "Witting",
+											"description": "required|string|min:4|max:39",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "+75238180766",
+											"description": "required|string|regex:/^\\+7\\d{10}$/",
+											"type": "text"
+										},
+										{
+											"key": "avatar",
+											"description": "nullable|image|mimes:png,jpg|max:2048",
+											"type": "file",
+											"src": "/home/vaerus/67a276e158d39.png",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseApi}}/users/1",
+									"host": [
+										"{{baseApi}}"
+									],
+									"path": [
+										"users",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 02:34:03 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"User updated successfully!\",\n    \"data\": {\n        \"id\": 1\n    }\n}"
+						},
+						{
+							"name": "Update User 404",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "firstname",
+											"value": "Adaline",
+											"description": "required|string|min:4|max:39",
+											"type": "text"
+										},
+										{
+											"key": "lastname",
+											"value": "Witting",
+											"description": "required|string|min:4|max:39",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "+75238180766",
+											"description": "required|string|regex:/^\\+7\\d{10}$/",
+											"type": "text"
+										},
+										{
+											"key": "avatar",
+											"description": "nullable|image|mimes:png,jpg|max:2048",
+											"type": "file",
+											"src": "/home/vaerus/67a276e158d39.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "0.0.0.0/api/users/55",
+									"host": [
+										"0",
+										"0",
+										"0",
+										"0"
+									],
+									"path": [
+										"api",
+										"users",
+										"55"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 03:02:49 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 404,\n    \"message\": \"Error\",\n    \"errors\": {\n        \"1\": \"User not found\"\n    }\n}"
+						},
+						{
+							"name": "Update User ValidationFailed",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "firstname",
+											"value": "Adalinedfdfsfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdf",
+											"description": "required|string|min:4|max:39",
+											"type": "text"
+										},
+										{
+											"key": "lastname",
+											"value": "W",
+											"description": "required|string|min:4|max:39",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "+7523818076645435345",
+											"description": "required|string|regex:/^\\+7\\d{10}$/",
+											"type": "text"
+										},
+										{
+											"key": "avatar",
+											"description": "nullable|image|mimes:png,jpg|max:2048",
+											"type": "file",
+											"src": "/home/vaerus/67a276e158d39.png",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseApi}}/users/1",
+									"host": [
+										"{{baseApi}}"
+									],
+									"path": [
+										"users",
+										"1"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 03:13:30 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"The firstname field must not be greater than 39 characters. (and 2 more errors)\",\n    \"errors\": {\n        \"firstname\": [\n            \"The firstname field must not be greater than 39 characters.\"\n        ],\n        \"lastname\": [\n            \"The lastname field must be at least 4 characters.\"\n        ],\n        \"phone\": [\n            \"The phone field format is invalid.\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseApi}}/users/:id",
+							"host": [
+								"{{baseApi}}"
+							],
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						},
+						"description": "Удалить пользователя."
+					},
+					"response": [
+						{
+							"name": "Delete User",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "0.0.0.0/api/users/14",
+									"host": [
+										"0",
+										"0",
+										"0",
+										"0"
+									],
+									"path": [
+										"api",
+										"users",
+										"14"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 02:36:01 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"User deleted successfully!\",\n    \"data\": {\n        \"id\": 14\n    }\n}"
+						},
+						{
+							"name": "Delete User 404",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseApi}}/users/55",
+									"host": [
+										"{{baseApi}}"
+									],
+									"path": [
+										"users",
+										"55"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 03:03:15 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 404,\n    \"message\": \"Error\",\n    \"errors\": {\n        \"1\": \"User with id 55 not found\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Company",
+			"item": [
+				{
+					"name": "Get Top Rated Company",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseApi}}/company/top_rating",
+							"host": [
+								"{{baseApi}}"
+							],
+							"path": [
+								"company",
+								"top_rating"
+							]
+						},
+						"description": "Получить топ-10 компаний по оценке."
+					},
+					"response": [
+						{
+							"name": "Get Top Rated Company",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "0.0.0.0/api/company/top_rating",
+									"host": [
+										"0",
+										"0",
+										"0",
+										"0"
+									],
+									"path": [
+										"api",
+										"company",
+										"top_rating"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 02:36:13 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Top 10 company\",\n    \"data\": [\n        {\n            \"companyDto\": {\n                \"companyId\": 16,\n                \"name\": \"Crist, Cronin and Volkman\",\n                \"description\": \"Corrupti ipsam blanditiis rerum nisi minus voluptas harum asperiores. Laboriosam nemo deserunt aut laborum vel esse earum. Exercitationem et voluptates ut ut porro fugit dicta.\",\n                \"logoId\": null\n            },\n            \"rating\": 7.5\n        },\n        {\n            \"companyDto\": {\n                \"companyId\": 17,\n                \"name\": \"Weimann, Kulas and Kutch\",\n                \"description\": \"Deleniti omnis corporis quia minus sit. Libero libero facere ducimus tempora qui ea. Vitae accusantium qui maxime dolorem ipsam dolores suscipit facere. Sint ut expedita in cumque tem\",\n                \"logoId\": null\n            },\n            \"rating\": 7.4\n        },\n        {\n            \"companyDto\": {\n                \"companyId\": 1,\n                \"name\": \"Greenfelder, Lakin and Zboncak\",\n                \"description\": \"Dolorem temporibus qui suscipit inventore. Fuga dolorem impedit eos dignissimos velit officia quas. Hic nulla reprehenderit asperiores quia praesentium dignissimos et.\",\n                \"logoId\": 4\n            },\n            \"rating\": 6.8\n        },\n        {\n            \"companyDto\": {\n                \"companyId\": 19,\n                \"name\": \"Tillman Inc\",\n                \"description\": \"Nihil numquam error itaque at et qui omnis. Eos excepturi nesciunt rerum quia quis in perferendis. Amet omnis voluptas libero necessitatibus est adipisci. Nesciunt p\",\n                \"logoId\": null\n            },\n            \"rating\": 6.6\n        },\n        {\n            \"companyDto\": {\n                \"companyId\": 3,\n                \"name\": \"Mraz-DuBuque\",\n                \"description\": \"Cumque consequatur et quos id aperiam. Ut est laudantium eos praesentium aliquid molestias optio. Omnis voluptates incidunt hic dolorem eveniet quae alias. Et harum ut autem reiciendis quae consectetur exercitationem omnis. Voluptates velit nesciunt id et quod delectus. Animi eum enim et omni\",\n                \"logoId\": 6\n            },\n            \"rating\": 6.5\n        },\n        {\n            \"companyDto\": {\n                \"companyId\": 2,\n                \"name\": \"Fadel-Boehm\",\n                \"description\": \"Distinctio voluptatem quia magni explicabo consequatur accusantium cum. In blanditiis deserunt non beatae. Ab quis at aut. Doloribus fuga vero maxime rerum explicabo dolore. Ullam aut quae velit sint qui. Quia perspiciatis quaerat voluptatem molestias quia quaerat error. A quae est cum vel. Aut ea ve\",\n                \"logoId\": 5\n            },\n            \"rating\": 6.4\n        },\n        {\n            \"companyDto\": {\n                \"companyId\": 11,\n                \"name\": \"Dach, Ruecker and Gaylord\",\n                \"description\": \"Recusandae aliquid aut est debitis totam vitae impedit. Doloremque ut numquam nam veritatis et natus repellendus. Distinctio esse odio eos dolorem voluptatem. Non molestiae consequatur ad facilis ut iusto. Praesentium quod omnis rerum aperiam vitae ut et. Omnis aut expedita nesciunt volupt\",\n                \"logoId\": null\n            },\n            \"rating\": 6.4\n        },\n        {\n            \"companyDto\": {\n                \"companyId\": 6,\n                \"name\": \"Dibbert and Sons\",\n                \"description\": \"Molestiae minima vero delectus. Molestias in est nisi harum commodi. Harum cupiditate esse quidem quo qui. Corporis autem et ad perspiciatis dolorem atque doloribus et. Asperiores similique mole\",\n                \"logoId\": null\n            },\n            \"rating\": 6\n        },\n        {\n            \"companyDto\": {\n                \"companyId\": 15,\n                \"name\": \"Koelpin-Heller\",\n                \"description\": \"Accusamus veniam possimus qui qui sunt veritatis quasi. Voluptatum quia assumenda dolorem nemo in. Aspernatur sit beatae qui tempore est. Aut saepe voluptatem non dolor. Rerum voluptatem excepturi odit eos. Esse autem consequatur fuga totam. Accusantium voluptate cum facilis id. Fuga et molestiae nihil ea facilis quis numquam.\",\n                \"logoId\": null\n            },\n            \"rating\": 6\n        },\n        {\n            \"companyDto\": {\n                \"companyId\": 10,\n                \"name\": \"Sipes Inc\",\n                \"description\": \"Qui vitae vel officiis ad magnam. Sed ut quo voluptatem qui ut rerum repudiandae soluta. Atque iure quia amet iste accusantium. Ipsa laudantium architecto qui quo blanditiis. Explicabo sapiente sit magni laudantium. Cupiditate quae ducimus aut nemo enim.\",\n                \"logoId\": null\n            },\n            \"rating\": 5.7\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Company",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseApi}}/company/:id",
+							"host": [
+								"{{baseApi}}"
+							],
+							"path": [
+								"company",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						},
+						"description": "Получить компанию по id."
+					},
+					"response": [
+						{
+							"name": "Get Company",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "0.0.0.0/api/company/1",
+									"host": [
+										"0",
+										"0",
+										"0",
+										"0"
+									],
+									"path": [
+										"api",
+										"company",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 02:36:44 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Ok\",\n    \"data\": {\n        \"companyId\": 1,\n        \"name\": \"Greenfelder, Lakin and Zboncak\",\n        \"description\": \"Dolorem temporibus qui suscipit inventore. Fuga dolorem impedit eos dignissimos velit officia quas. Hic nulla reprehenderit asperiores quia praesentium dignissimos et.\",\n        \"logoId\": 4\n    }\n}"
+						},
+						{
+							"name": "Get Company 404",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "0.0.0.0/api/company/55",
+									"host": [
+										"0",
+										"0",
+										"0",
+										"0"
+									],
+									"path": [
+										"api",
+										"company",
+										"55"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 03:03:43 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 404,\n    \"message\": \"Error\",\n    \"errors\": {\n        \"1\": \"Company with id 55 not found\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Company Rating",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseApi}}/company/:id/rating",
+							"host": [
+								"{{baseApi}}"
+							],
+							"path": [
+								"company",
+								":id",
+								"rating"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						},
+						"description": "Получить общую оценку компании."
+					},
+					"response": [
+						{
+							"name": "Get Company Rating",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "0.0.0.0/api/company/1/rating",
+									"host": [
+										"0",
+										"0",
+										"0",
+										"0"
+									],
+									"path": [
+										"api",
+										"company",
+										"1",
+										"rating"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 02:37:02 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Company 1 rating\",\n    \"data\": {\n        \"companyDto\": {\n            \"companyId\": 1,\n            \"name\": \"Greenfelder, Lakin and Zboncak\",\n            \"description\": \"Dolorem temporibus qui suscipit inventore. Fuga dolorem impedit eos dignissimos velit officia quas. Hic nulla reprehenderit asperiores quia praesentium dignissimos et.\",\n            \"logoId\": 4\n        },\n        \"rating\": 6.8\n    }\n}"
+						},
+						{
+							"name": "Get Company Rating 404",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "0.0.0.0/api/company/55/rating",
+									"host": [
+										"0",
+										"0",
+										"0",
+										"0"
+									],
+									"path": [
+										"api",
+										"company",
+										"55",
+										"rating"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 03:04:08 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 404,\n    \"message\": \"Error\",\n    \"errors\": {\n        \"1\": \"Company with id 55 not found\"\n    }\n}"
+						},
+						{
+							"name": "Get Company Rating 404 No Rating Data",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseApi}}/company/26/rating",
+									"host": [
+										"{{baseApi}}"
+									],
+									"path": [
+										"company",
+										"26",
+										"rating"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 03:45:16 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 404,\n    \"message\": \"Error\",\n    \"errors\": {\n        \"1\": \"Company rating for id 26 not found\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Company Logo",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseApi}}/company/:id/logo",
+							"host": [
+								"{{baseApi}}"
+							],
+							"path": [
+								"company",
+								":id",
+								"logo"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						},
+						"description": "Получить логотип компании."
+					},
+					"response": [
+						{
+							"name": "Get Company Logo 404 Logo",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "0.0.0.0/api/company/5/logo",
+									"host": [
+										"0",
+										"0",
+										"0",
+										"0"
+									],
+									"path": [
+										"api",
+										"company",
+										"5",
+										"logo"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 03:04:27 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 404,\n    \"message\": \"Error\",\n    \"errors\": {\n        \"1\": \"CompanyLogo not found\"\n    }\n}"
+						},
+						{
+							"name": "Get Company Logo 404 Company",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseApi}}/company/55/logo",
+									"host": [
+										"{{baseApi}}"
+									],
+									"path": [
+										"company",
+										"55",
+										"logo"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 03:04:39 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 404,\n    \"message\": \"Error\",\n    \"errors\": {\n        \"1\": \"Company with id 55 not found\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Company Logo",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseApi}}/company/:id/logo",
+							"host": [
+								"{{baseApi}}"
+							],
+							"path": [
+								"company",
+								":id",
+								"logo"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						},
+						"description": "Удалить логотип компании."
+					},
+					"response": [
+						{
+							"name": "Delete Company Logo",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "0.0.0.0/api/company/27/logo",
+									"host": [
+										"0",
+										"0",
+										"0",
+										"0"
+									],
+									"path": [
+										"api",
+										"company",
+										"27",
+										"logo"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 02:44:55 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Company logo deleted successfully!\",\n    \"data\": {\n        \"id\": 27\n    }\n}"
+						},
+						{
+							"name": "Delete Company Logo 404",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "0.0.0.0/api/company/55/logo",
+									"host": [
+										"0",
+										"0",
+										"0",
+										"0"
+									],
+									"path": [
+										"api",
+										"company",
+										"55",
+										"logo"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 03:05:04 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 404,\n    \"message\": \"Error\",\n    \"errors\": {\n        \"1\": \"Company with id 55 not found\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Company",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"name\": \"Company XYZ\", \"description\": \"A great company\" }"
+						},
+						"url": {
+							"raw": "{{baseApi}}/company",
+							"host": [
+								"{{baseApi}}"
+							],
+							"path": [
+								"company"
+							]
+						},
+						"description": "Создать компанию. Логотип является обязательным."
+					},
+					"response": [
+						{
+							"name": "Create Company",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Schroeder Inc2",
+											"description": "required|string|min:4|max:39",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Dolores facilis et eius perspiciatis incidunt. Rerum dolorem quis recusandae ea repudiandae fugit repellat. Sequi atque animi quae ea omnis necessitatibus qui. Aut officia nam blanditiis deserunt consequuntur dolor. Veniam ab fuga at nobis consequatur odio.",
+											"description": "required|string|min:150|max:400",
+											"type": "text"
+										},
+										{
+											"key": "logo",
+											"description": "required|image|mimes:png|max:3072",
+											"type": "file",
+											"src": "/home/vaerus/67a276e158d39.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "0.0.0.0/api/company",
+									"host": [
+										"0",
+										"0",
+										"0",
+										"0"
+									],
+									"path": [
+										"api",
+										"company"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 02:41:43 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Company created successfully!\",\n    \"data\": {\n        \"id\": 27\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Company",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"name\": \"Updated Company\", \"description\": \"Updated description\" }"
+						},
+						"url": {
+							"raw": "{{baseApi}}/company/:id",
+							"host": [
+								"{{baseApi}}"
+							],
+							"path": [
+								"company",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						},
+						"description": "Обновить компанию. Логотип не является обязательным."
+					},
+					"response": [
+						{
+							"name": "Update Company with Logo",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Schroeder Inc3",
+											"description": "required|string|min:4|max:39",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Voluptatem odit consequatur voluptas vel. Iusto tempore voluptatibus consequuntur recusandae sint perferendis. Tempora dolor magni impedit enim. Ut sit at at non aut",
+											"description": "required|string|min:150|max:400",
+											"type": "text"
+										},
+										{
+											"key": "logo",
+											"description": "nullable|image|mimes:png|max:3072",
+											"type": "file",
+											"src": "/home/vaerus/67a276e158d39.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "0.0.0.0/api/company/27",
+									"host": [
+										"0",
+										"0",
+										"0",
+										"0"
+									],
+									"path": [
+										"api",
+										"company",
+										"27"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 02:42:56 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Company updated successfully!\",\n    \"data\": {\n        \"id\": 27\n    }\n}"
+						},
+						{
+							"name": "Update Company without Logo",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Schroeder Inc3",
+											"description": "required|string|min:4|max:39",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Voluptatem odit consequatur voluptas vel. Iusto tempore voluptatibus consequuntur recusandae sint perferendis. Tempora dolor magni impedit enim. Ut sit at at non aut",
+											"description": "required|string|min:150|max:400",
+											"type": "text"
+										},
+										{
+											"key": "logo",
+											"description": "nullable|image|mimes:png|max:3072",
+											"type": "file",
+											"src": "/home/vaerus/67a276e158d39.png",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseApi}}/company/27",
+									"host": [
+										"{{baseApi}}"
+									],
+									"path": [
+										"company",
+										"27"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 02:44:29 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Company updated successfully!\",\n    \"data\": {\n        \"id\": 27\n    }\n}"
+						},
+						{
+							"name": "Update Company 404",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Schroeder Inc3",
+											"description": "required|string|min:4|max:39",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Voluptatem odit consequatur voluptas vel. Iusto tempore voluptatibus consequuntur recusandae sint perferendis. Tempora dolor magni impedit enim. Ut sit at at non aut",
+											"description": "required|string|min:150|max:400",
+											"type": "text"
+										},
+										{
+											"key": "logo",
+											"description": "nullable|image|mimes:png|max:3072",
+											"type": "file",
+											"src": "/home/vaerus/67a276e158d39.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseApi}}/company/55",
+									"host": [
+										"{{baseApi}}"
+									],
+									"path": [
+										"company",
+										"55"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 03:05:29 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 404,\n    \"message\": \"Error\",\n    \"errors\": {\n        \"1\": \"Company not found\"\n    }\n}"
+						},
+						{
+							"name": "Update Company ValidationFailed",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "d",
+											"description": "required|string|min:4|max:39",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "d",
+											"description": "required|string|min:150|max:400",
+											"type": "text"
+										},
+										{
+											"key": "logo",
+											"description": "nullable|image|mimes:png|max:3072",
+											"type": "file",
+											"src": "/home/vaerus/67a276e158d39.png",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseApi}}/company/27",
+									"host": [
+										"{{baseApi}}"
+									],
+									"path": [
+										"company",
+										"27"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 03:14:40 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"The name field must be at least 4 characters. (and 1 more error)\",\n    \"errors\": {\n        \"name\": [\n            \"The name field must be at least 4 characters.\"\n        ],\n        \"description\": [\n            \"The description field must be at least 150 characters.\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Company",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseApi}}/company/:id",
+							"host": [
+								"{{baseApi}}"
+							],
+							"path": [
+								"company",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						},
+						"description": "Удалить компанию."
+					},
+					"response": [
+						{
+							"name": "Delete Company",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "0.0.0.0/api/company/26",
+									"host": [
+										"0",
+										"0",
+										"0",
+										"0"
+									],
+									"path": [
+										"api",
+										"company",
+										"26"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 02:45:09 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Company deleted successfully!\",\n    \"data\": {\n        \"id\": 26\n    }\n}"
+						},
+						{
+							"name": "Delete Company 404",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseApi}}/company/55",
+									"host": [
+										"{{baseApi}}"
+									],
+									"path": [
+										"company",
+										"55"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 03:07:17 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 404,\n    \"message\": \"Error\",\n    \"errors\": {\n        \"1\": \"Company with id 55 not found\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Comments",
+			"item": [
+				{
+					"name": "Get Comment",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseApi}}/comments/:id",
+							"host": [
+								"{{baseApi}}"
+							],
+							"path": [
+								"comments",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						},
+						"description": "Получить комментарий к компании."
+					},
+					"response": [
+						{
+							"name": "Get Comment",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "0.0.0.0/api/comments/1",
+									"host": [
+										"0",
+										"0",
+										"0",
+										"0"
+									],
+									"path": [
+										"api",
+										"comments",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 02:46:00 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Ok\",\n    \"data\": {\n        \"commentId\": 1,\n        \"userId\": 1,\n        \"companyId\": 1,\n        \"content\": \"Esse rerum excepturi unde minus id voluptatibus. Iure quia optio est aut assumenda fuga. Fugit praesentium quia dolor qui voluptas maxime. Qui fugiat architecto accusamus earum est. Quaerat ut ut dignissimos. Aperiam quidem excepturi reprehenderit. Doloribus aut aut sint porro omnis dignissimos. Natus vel qui et voluptas tenetur. Quaerat nam et sapiente tempora deserunt voluptatibus.\",\n        \"rating\": 7\n    }\n}"
+						},
+						{
+							"name": "Get Comment 404",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseApi}}/comments/5555",
+									"host": [
+										"{{baseApi}}"
+									],
+									"path": [
+										"comments",
+										"5555"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 03:07:48 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 404,\n    \"message\": \"Error\",\n    \"errors\": {\n        \"1\": \"Comment with id 5555 not found\"\n    }\n}"
+						},
+						{
+							"name": "Get Comment 400 UserId Null or CompanyIdNull",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{baseApi}}/comments/4",
+									"host": [
+										"{{baseApi}}"
+									],
+									"path": [
+										"comments",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 03:52:22 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 400,\n    \"message\": \"Error\",\n    \"errors\": {\n        \"1\": \"Invalid comment key 4 not found\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Comments By Company",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseApi}}/comments/by_company/:id",
+							"host": [
+								"{{baseApi}}"
+							],
+							"path": [
+								"comments",
+								"by_company",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						},
+						"description": "Получить все комментарии компании по Id."
+					},
+					"response": [
+						{
+							"name": "Get Comments By Company",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "0.0.0.0/api/comments/by_company/1",
+									"host": [
+										"0",
+										"0",
+										"0",
+										"0"
+									],
+									"path": [
+										"api",
+										"comments",
+										"by_company",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 02:46:18 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Ok\",\n    \"data\": [\n        {\n            \"commentId\": 1,\n            \"userId\": 1,\n            \"companyId\": 1,\n            \"content\": \"Esse rerum excepturi unde minus id voluptatibus. Iure quia optio est aut assumenda fuga. Fugit praesentium quia dolor qui voluptas maxime. Qui fugiat architecto accusamus earum est. Quaerat ut ut dignissimos. Aperiam quidem excepturi reprehenderit. Doloribus aut aut sint porro omnis dignissimos. Natus vel qui et voluptas tenetur. Quaerat nam et sapiente tempora deserunt voluptatibus.\",\n            \"rating\": 7\n        },\n        {\n            \"commentId\": 26,\n            \"userId\": 2,\n            \"companyId\": 1,\n            \"content\": \"Labore repudiandae delectus quo libero. Debitis harum dolor maxime consequatur autem ut quas. Aut in cupiditate iste delectus maiores. Beatae voluptate sed ab ne\",\n            \"rating\": 10\n        },\n        {\n            \"commentId\": 51,\n            \"userId\": 3,\n            \"companyId\": 1,\n            \"content\": \"Accusamus est praesentium quaerat est sed similique quae. Aut rem omnis qui debitis. Voluptatum maxime tenetur omnis ut beatae saepe debitis. Odio impedit voluptatibus tempora commodi nemo. Officiis dolorum quaerat architecto suscipit. Voluptatem nisi ut necessitatibus quam quia. Sit at reiciendis maxime consequatur perspiciatis ipsam. In animi dignissimos occaecati maxime saepe i\",\n            \"rating\": 3\n        },\n        {\n            \"commentId\": 76,\n            \"userId\": 4,\n            \"companyId\": 1,\n            \"content\": \"Non autem vero porro magnam corrupti at. Aut et nesciunt necessitatibus voluptatem voluptatem et veniam. Sed quo mollitia praesentium consequuntur asperiores reiciendis sequi. Voluptatum omnis quae est consequatur accusantium ut. Sequi eveniet magni enim corporis nostrum. Et quos unde est eius. Qui numquam labore veniam alias sunt et dicta. Velit provident id ratione omnis maxime saepe. Dolorem enim \",\n            \"rating\": 8\n        },\n        {\n            \"commentId\": 101,\n            \"userId\": 5,\n            \"companyId\": 1,\n            \"content\": \"Eum vel itaque recusandae porro earum temporibus. Aut aut ut quidem dolores molestiae ducimus reprehenderit. Iste consequatur doloribus corporis laboriosam. Sunt aut et consectetur dolorem. Ex id minima amet consequatur rerum non. Explicabo fugit nesciunt consequatur odio repudiandae voluptas pariatur. Quaerat quia repudiandae aut ut. Ea necessitatibus nobis delectus. Qui ut et eum ad rerum nisi. Omnis et et natus voluptatem dolorem nihil.\",\n            \"rating\": 5\n        },\n        {\n            \"commentId\": 126,\n            \"userId\": 6,\n            \"companyId\": 1,\n            \"content\": \"Et necessitatibus et quasi voluptatem in. Ullam dolores tenetur repellendus eos ipsum dolorem. Porro debitis voluptatem placeat ut et. Unde vel nemo quo vitae. Est quas ab in et sit. Assumenda provident sit voluptas hic distinctio quo. Iure odio sequi non voluptas. Deleniti facere perspiciatis omnis blanditiis vel velit. Voluptatem illo ea quod in necessitatibus tenetur saepe. Inventore aspernatur ullam odio quia voluptas sunt. Voluptatem officia aut cum saepe at ipsum molestias.\",\n            \"rating\": 6\n        },\n        {\n            \"commentId\": 151,\n            \"userId\": 7,\n            \"companyId\": 1,\n            \"content\": \"Illo repellat tenetur quasi omnis. Amet rerum qui animi omnis voluptas et. Molestiae dolores unde earum quasi a placeat. Accusantium doloribus voluptatem est fugiat molestiae dolores. Natus nobis debitis sit sit. Nihil eos et voluptates fugiat autem voluptates reiciendis. Molestiae quo unde impedit. Id consequatur magnam consequuntur temporibus ab est nulla illum. Quia nihil et placeat ducimus nobis. Nihil fugit nulla consequatur voluptatem eos fugiat. Velit dolorem sit quia su\",\n            \"rating\": 8\n        },\n        {\n            \"commentId\": 176,\n            \"userId\": 8,\n            \"companyId\": 1,\n            \"content\": \"Consequatur blanditiis quaerat sit dicta. Molestiae aut facilis neque cumque. Unde qui nostrum et non ipsam non perspiciatis asperiores. Unde dicta earum quia voluptatem. Rem corporis numquam voluptatibus quis cum doloribus. Molestiae velit quas et et placeat voluptatem. Sed voluptate culpa itaque reprehenderit. Ea id iusto eos exercitation\",\n            \"rating\": 9\n        },\n        {\n            \"commentId\": 201,\n            \"userId\": 9,\n            \"companyId\": 1,\n            \"content\": \"Id iure ut dicta et ex quia qui. Dolor ullam a atque fuga molestiae est. Qui id id doloremque amet aut. Asperiores enim amet quo aliquid excepturi expedita beatae. Et sunt harum ipsam repudiandae unde est. Veniam necessitatibus excepturi ut repellat et nisi aut minus. Adipisci rem quas \",\n            \"rating\": 3\n        },\n        {\n            \"commentId\": 226,\n            \"userId\": 10,\n            \"companyId\": 1,\n            \"content\": \"Atque id ut molestias natus et impedit. Porro delectus qui ab quae aut ipsa dolores dicta. Ab suscipit itaque sed corrupti voluptatem reprehenderit aspernatur. Repellendus sequi quidem libero omnis dolores molestiae ea quam. Qui ea eum odio aut incidunt voluptas est. Sit dolorum hic molestiae. Deserunt nisi vel ipsam enim quis et aut. Quis cupiditate ab eum. Sit sit ipsa unde. Natus nesciunt ullam eligendi qui ducimus tenetur laborum. Dolor non accusamus necessitatibus saepe. Harum mollitia consectetur et.\",\n            \"rating\": 9\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Comment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"company_id\": 1, \"text\": \"Great company!\" }"
+						},
+						"url": {
+							"raw": "{{baseApi}}/comments",
+							"host": [
+								"{{baseApi}}"
+							],
+							"path": [
+								"comments"
+							]
+						},
+						"description": "Создать комментарий."
+					},
+					"response": [
+						{
+							"name": "Create Comment",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "user_id",
+											"value": "5",
+											"description": "required|integer|exists:users,user_id",
+											"type": "text"
+										},
+										{
+											"key": "company_id",
+											"value": "10",
+											"description": "required|integer|exists:company,company_id",
+											"type": "text"
+										},
+										{
+											"key": "content",
+											"value": "Voluptatem odit consequatur voluptas vel. Iusto tempore voluptatibus consequuntur recusandae sint perferendis. Tempora dolor magni impedit enim. Ut sit at at non aut",
+											"description": "required|string|min:150|max:550",
+											"type": "text"
+										},
+										{
+											"key": "rating",
+											"value": "10",
+											"description": "required|numeric|integer|min:1|max:10",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "0.0.0.0/api/comments",
+									"host": [
+										"0",
+										"0",
+										"0",
+										"0"
+									],
+									"path": [
+										"api",
+										"comments"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 02:47:09 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Comment created successfully!\",\n    \"data\": {\n        \"id\": 252\n    }\n}"
+						},
+						{
+							"name": "Create Comment Validation Failed",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "user_id",
+											"value": "555",
+											"description": "required|integer|exists:users,user_id",
+											"type": "text"
+										},
+										{
+											"key": "company_id",
+											"value": "555",
+											"description": "required|integer|exists:company,company_id",
+											"type": "text"
+										},
+										{
+											"key": "content",
+											"value": "dfgd",
+											"description": "required|string|min:150|max:550",
+											"type": "text"
+										},
+										{
+											"key": "rating",
+											"value": "15",
+											"description": "required|numeric|integer|min:1|max:10",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseApi}}/comments",
+									"host": [
+										"{{baseApi}}"
+									],
+									"path": [
+										"comments"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 03:10:19 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"The selected user id is invalid. (and 3 more errors)\",\n    \"errors\": {\n        \"user_id\": [\n            \"The selected user id is invalid.\"\n        ],\n        \"company_id\": [\n            \"The selected company id is invalid.\"\n        ],\n        \"content\": [\n            \"The content field must be at least 150 characters.\"\n        ],\n        \"rating\": [\n            \"The rating field must not be greater than 10.\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Comment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"text\": \"Updated comment text\" }"
+						},
+						"url": {
+							"raw": "{{baseApi}}/comments/:id",
+							"host": [
+								"{{baseApi}}"
+							],
+							"path": [
+								"comments",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						},
+						"description": "Обновить комментарий."
+					},
+					"response": [
+						{
+							"name": "Update Comment",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "user_id",
+											"value": "1",
+											"description": "required|integer|exists:users,user_id",
+											"type": "text"
+										},
+										{
+											"key": "company_id",
+											"value": "5",
+											"description": "required|integer|exists:company,company_id",
+											"type": "text"
+										},
+										{
+											"key": "content",
+											"value": "Voluptatem odit consequatur voluptas vel. Iusto tempore voluptatibus consequuntur recusandae sint perferendis. Tempora dolor magni impedit enim. Ut sit at at non aut232",
+											"description": "required|string|min:150|max:550",
+											"type": "text"
+										},
+										{
+											"key": "rating",
+											"value": "8",
+											"description": "required|numeric|integer|min:1|max:10",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseApi}}/comments/202",
+									"host": [
+										"{{baseApi}}"
+									],
+									"path": [
+										"comments",
+										"202"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 02:49:38 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Comment updated successfully!\",\n    \"data\": {\n        \"id\": 202\n    }\n}"
+						},
+						{
+							"name": "Update Comment Validation Failed",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "user_id",
+											"value": "55",
+											"description": "required|integer|exists:users,user_id",
+											"type": "text"
+										},
+										{
+											"key": "company_id",
+											"value": "55",
+											"description": "required|integer|exists:company,company_id",
+											"type": "text"
+										},
+										{
+											"key": "content",
+											"value": "df",
+											"description": "required|string|min:150|max:550",
+											"type": "text"
+										},
+										{
+											"key": "rating",
+											"value": "-1df",
+											"description": "required|numeric|integer|min:1|max:10",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseApi}}/comments/202",
+									"host": [
+										"{{baseApi}}"
+									],
+									"path": [
+										"comments",
+										"202"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 03:11:19 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"The selected user id is invalid. (and 4 more errors)\",\n    \"errors\": {\n        \"user_id\": [\n            \"The selected user id is invalid.\"\n        ],\n        \"company_id\": [\n            \"The selected company id is invalid.\"\n        ],\n        \"content\": [\n            \"The content field must be at least 150 characters.\"\n        ],\n        \"rating\": [\n            \"The rating field must be a number.\",\n            \"The rating field must be an integer.\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Comment",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseApi}}/comments/:id",
+							"host": [
+								"{{baseApi}}"
+							],
+							"path": [
+								"comments",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						},
+						"description": "Удалить комментарий."
+					},
+					"response": [
+						{
+							"name": "Delete Comment",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseApi}}/comments/202",
+									"host": [
+										"{{baseApi}}"
+									],
+									"path": [
+										"comments",
+										"202"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 02:49:52 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Comment deleted successfully!\",\n    \"data\": {\n        \"id\": 202\n    }\n}"
+						},
+						{
+							"name": "Delete Comment 404",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseApi}}/comments/20544",
+									"host": [
+										"{{baseApi}}"
+									],
+									"path": [
+										"comments",
+										"20544"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "0.0.0.0"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 03:11:47 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 404,\n    \"message\": \"Error\",\n    \"errors\": {\n        \"1\": \"Comment with id 20544 not found\"\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseApi",
+			"value": "0.0.0.0/api"
+		}
+	]
+}
