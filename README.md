@@ -2,9 +2,11 @@
 
 ## Запуск
 
-    Выполнить ./vendor/bin/sail up
-    Применить миграции ./vendor/bin/sail artisan migrate
-    Запустить Seeder ./vendor/bin/sail artisan db:seed
+    Выполнить установку composer и docker, если не установлены.
+    Выполнить: composer install
+    Выполнить: ./vendor/bin/sail up
+    Применить миграции: ./vendor/bin/sail artisan migrate
+    Запустить Seeder: ./vendor/bin/sail artisan db:seed
 
 ## Документация
 
