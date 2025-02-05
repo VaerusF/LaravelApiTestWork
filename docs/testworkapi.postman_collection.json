@@ -43,7 +43,7 @@
 									}
 								],
 								"url": {
-									"raw": "0.0.0.0/api/users/100",
+									"raw": "0.0.0.0/api/users/5",
 									"host": [
 										"0",
 										"0",
@@ -53,7 +53,7 @@
 									"path": [
 										"api",
 										"users",
-										"100"
+										"5"
 									]
 								}
 							},
@@ -1070,7 +1070,7 @@
 									}
 								],
 								"url": {
-									"raw": "0.0.0.0/api/users/14",
+									"raw": "0.0.0.0/api/users/7",
 									"host": [
 										"0",
 										"0",
@@ -1080,7 +1080,7 @@
 									"path": [
 										"api",
 										"users",
-										"14"
+										"7"
 									]
 								}
 							},
@@ -1576,64 +1576,6 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"status\": 404,\n    \"message\": \"Error\",\n    \"errors\": {\n        \"1\": \"Company with id 55 not found\"\n    }\n}"
-						},
-						{
-							"name": "Get Company Rating 404 No Rating Data",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"url": {
-									"raw": "{{baseApi}}/company/26/rating",
-									"host": [
-										"{{baseApi}}"
-									],
-									"path": [
-										"company",
-										"26",
-										"rating"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Host",
-									"value": "0.0.0.0"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/8.4.3"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache, private"
-								},
-								{
-									"key": "Date",
-									"value": "Wed, 05 Feb 2025 03:45:16 GMT"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"status\": 404,\n    \"message\": \"Error\",\n    \"errors\": {\n        \"1\": \"Company rating for id 26 not found\"\n    }\n}"
 						}
 					]
 				},
@@ -1830,7 +1772,7 @@
 									}
 								],
 								"url": {
-									"raw": "0.0.0.0/api/company/27/logo",
+									"raw": "0.0.0.0/api/company/1/logo",
 									"host": [
 										"0",
 										"0",
@@ -1840,7 +1782,7 @@
 									"path": [
 										"api",
 										"company",
-										"27",
+										"1",
 										"logo"
 									]
 								}
@@ -2139,7 +2081,7 @@
 									]
 								},
 								"url": {
-									"raw": "0.0.0.0/api/company/27",
+									"raw": "0.0.0.0/api/company/25",
 									"host": [
 										"0",
 										"0",
@@ -2149,7 +2091,7 @@
 									"path": [
 										"api",
 										"company",
-										"27"
+										"25"
 									]
 								}
 							},
@@ -2228,13 +2170,13 @@
 									]
 								},
 								"url": {
-									"raw": "{{baseApi}}/company/27",
+									"raw": "{{baseApi}}/company/25",
 									"host": [
 										"{{baseApi}}"
 									],
 									"path": [
 										"company",
-										"27"
+										"25"
 									]
 								}
 							},
@@ -2397,13 +2339,13 @@
 									]
 								},
 								"url": {
-									"raw": "{{baseApi}}/company/27",
+									"raw": "{{baseApi}}/company/20",
 									"host": [
 										"{{baseApi}}"
 									],
 									"path": [
 										"company",
-										"27"
+										"20"
 									]
 								}
 							},
@@ -2485,7 +2427,7 @@
 									}
 								],
 								"url": {
-									"raw": "0.0.0.0/api/company/26",
+									"raw": "0.0.0.0/api/company/23",
 									"host": [
 										"0",
 										"0",
@@ -2495,7 +2437,7 @@
 									"path": [
 										"api",
 										"company",
-										"26"
+										"23"
 									]
 								}
 							},
@@ -2745,67 +2687,6 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"status\": 404,\n    \"message\": \"Error\",\n    \"errors\": {\n        \"1\": \"Comment with id 5555 not found\"\n    }\n}"
-						},
-						{
-							"name": "Get Comment 400 UserId Null or CompanyIdNull",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "formdata",
-									"formdata": []
-								},
-								"url": {
-									"raw": "{{baseApi}}/comments/4",
-									"host": [
-										"{{baseApi}}"
-									],
-									"path": [
-										"comments",
-										"4"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Host",
-									"value": "0.0.0.0"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/8.4.3"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache, private"
-								},
-								{
-									"key": "Date",
-									"value": "Wed, 05 Feb 2025 03:52:22 GMT"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"status\": 400,\n    \"message\": \"Error\",\n    \"errors\": {\n        \"1\": \"Invalid comment key 4 not found\"\n    }\n}"
 						}
 					]
 				},
